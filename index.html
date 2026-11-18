@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0c0516">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Bruninha ✦ um lugar que é nosso">
+<meta property="og:description" content="Um universo feito só pra você.">
+<title>Bruninha ✦ um lugar que é nosso</title>
+<style>
+:root{--bg:#0c0516;--ink:#f7f0ff;--muted:#bda9d9;--lilac:#c4a1ff;--orchid:#e3b5ff;--rose:#ff9fe0;--deep:#2b1157;--line:#c4a1ff2e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Helvetica Neue",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background:radial-gradient(ellipse 70% 50% at 50% 0%,#4a1d8c55,transparent 70%),radial-gradient(ellipse 50% 40% at 90% 60%,#8a2fa733,transparent 70%),radial-gradient(ellipse 60% 40% at 5% 85%,#3b1a8a44,transparent 70%),#0c0516}
+#stars{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.star{position:absolute;border-radius:50%;background:#f1e4ff;opacity:.55;animation:twinkle var(--t) ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.1}}
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(14px + env(safe-area-inset-top,0px)) 20px 14px;display:flex;justify-content:space-between;align-items:center;background:#0c0516b3;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);pointer-events:none}
+.brand{font:italic 15px Georgia,serif;color:var(--orchid);letter-spacing:.02em;text-transform:none}
+.counter{font-size:12px;color:#e9d9ff;letter-spacing:.06em;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:#c4a1ff14}
+main{width:min(1100px,100% - 32px);margin:auto}
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 0 50px;position:relative}
+.hero:before{content:"";position:absolute;top:50%;left:50%;width:min(520px,90vw);aspect-ratio:1;transform:translate(-50%,-55%);border-radius:50%;background:radial-gradient(circle,#9b5cff55,#6a2fd622 45%,transparent 70%);filter:blur(30px);z-index:-1}
+.eyebrow{color:var(--orchid);text-transform:uppercase;letter-spacing:.3em;font-size:11px;margin-bottom:22px;padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#c4a1ff10}
+h1{font-family:Georgia,serif;font-weight:400;letter-spacing:-.04em;font-size:clamp(46px,9vw,92px);line-height:1;margin:0;background:linear-gradient(180deg,#fff 10%,#d9b8ff 60%,#ff9fe0 120%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:440px;color:var(--muted);line-height:1.8;font-size:15px;margin:24px auto 30px}
+.primary{border:0;color:#fff;background:linear-gradient(135deg,#8b4dff,#c05bff 60%,#ff8fd8);border-radius:999px;padding:15px 28px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:.25s;box-shadow:0 10px 35px #8b4dff55}
+.primary:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 14px 45px #b25cff77}
+.scrollhint{position:absolute;bottom:24px;color:#8f7bb0;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:28px}
+.kicker{color:var(--lilac);text-transform:uppercase;letter-spacing:.24em;font-size:11px}
+.kicker:before,.kicker:after{content:"";display:inline-block;width:22px;height:1px;background:var(--lilac);opacity:.5;vertical-align:middle;margin:0 10px}
+h2{font:400 clamp(30px,5vw,48px) Georgia,serif;margin:12px 0;letter-spacing:-.02em}
+.section-head p{color:var(--muted);font-size:14px;line-height:1.7;margin:0 auto;max-width:520px}
+.space-wrap{width:min(760px,100%);height:min(760px,92vw);min-height:440px;margin:10px auto 0;position:relative;display:grid;place-items:center;touch-action:pan-y;user-select:none}
+.space-wrap:after{content:"";position:absolute;width:24%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,#e3b5ff 14%,#a45cff 40%,#5a22b8 65%,transparent 74%);box-shadow:0 0 70px #a45cff88,0 0 160px #7a3fe040;pointer-events:none}
+.core{position:absolute;z-index:2;width:20%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;font:italic 14px Georgia,serif;color:#2b1157;font-weight:700;pointer-events:none}
+.orbit{position:absolute;border:1px dashed #d2b4ff30;border-radius:50%;pointer-events:none}
+.planet-path{position:absolute;inset:0;pointer-events:none}.planet-path .planet{pointer-events:auto}
+.planet{position:absolute;left:50%;top:50%;will-change:transform;width:clamp(43px,8vw,66px);aspect-ratio:1;border:0;border-radius:50%;cursor:pointer;box-shadow:inset -9px -8px 15px #0009,inset 5px 5px 12px #ffffff55,0 0 26px var(--glow);background:var(--planet);display:grid;place-items:center;transition:filter .2s,scale .2s;touch-action:manipulation}
+.planet:after{content:"";position:absolute;inset:13% 18% 56% 14%;border-radius:50%;background:#ffffff40;filter:blur(5px)}
+.planet:hover,.planet:focus-visible{filter:brightness(1.25);scale:1.12;outline:1px solid #fffa;outline-offset:5px}
+.planet-label{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);font-size:11px;white-space:nowrap;color:#efe3ff;letter-spacing:.06em;text-shadow:0 2px 8px #000;pointer-events:none}
+.planet[data-id=start]{--planet:radial-gradient(circle at 30% 25%,#ffd6f5,#d46be0 42%,#5c1b78 82%);--glow:#d46be099}
+.planet[data-id=her]{--planet:radial-gradient(circle at 30% 25%,#ffe3f7,#ff8fd8 42%,#8a2a79 82%);--glow:#ff8fd899}
+.planet[data-id=us]{--planet:radial-gradient(circle at 30% 25%,#e4d4ff,#9a6bff 42%,#3b1c94 82%);--glow:#9a6bff99}
+.planet[data-id=future]{--planet:radial-gradient(circle at 30% 25%,#f3e6ff,#c9a0ff 42%,#58308f 82%);--glow:#c9a0ff99}
+.planet[data-id=secret]{--planet:radial-gradient(circle at 30% 25%,#d9d2ff,#6f6cf0 42%,#262070 82%);--glow:#6f6cf099}
+.planet[data-id=music]{--planet:radial-gradient(circle at 30% 25%,#fbd9ff,#b653ff 42%,#471386 82%);--glow:#b653ff99}
+.planet[data-id=sorry]{--planet:radial-gradient(circle at 30% 25%,#e6e0ff,#8f82e8 42%,#2f2a7a 82%);--glow:#8f82e899}
+.hint{text-align:center;color:#9d88bd;font-size:13px}
+.drag-indicator{display:flex;justify-content:center;gap:7px;color:#8f7bb0;font-size:12px;margin-top:8px}
+.story-panel{width:min(620px,100%);margin:30px auto 0;min-height:180px;padding:28px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,#2b115799,#150a2ccc);box-shadow:0 25px 80px #6a2fd633;backdrop-filter:blur(18px);display:none;animation:appear .35s ease}
+.story-panel.show{display:block}
+@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.panel-tag{font-size:11px;color:var(--orchid);text-transform:uppercase;letter-spacing:.22em}
+.close{border:1px solid var(--line);background:#ffffff0d;color:#e6d6ff;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:18px}
+.story-panel h3{font:400 30px Georgia,serif;margin:18px 0 10px}
+.story-panel p{color:#d8c9ee;line-height:1.85;font-size:14.5px;margin:0}
+.panel-foot{color:#a58ccc;font-size:12.5px;margin-top:18px;font-style:italic}
+.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px;counter-reset:m}
+.memory{counter-increment:m;position:relative;min-height:170px;padding:22px 18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(160deg,#2a1257aa,#140a2b);cursor:pointer;text-align:left;color:var(--ink);transition:.3s;font-family:inherit;overflow:hidden}
+.memory:before{content:"0" counter(m);position:absolute;top:14px;right:18px;font:italic 13px Georgia,serif;color:#c4a1ff80}
+.memory:hover{transform:translateY(-5px);border-color:#d2a8ff88;box-shadow:0 18px 45px #8b4dff33}
+.memory .symbol{font-size:24px;display:block;margin-bottom:22px;color:var(--rose)}
+.memory strong{font:400 19px Georgia,serif;display:block;margin-bottom:7px}
+.memory small{color:var(--muted);line-height:1.5;font-size:13px}
+.memory-detail{margin:16px auto 0;max-width:680px;padding:24px;border-radius:20px;background:#1d0e3d;border:1px solid var(--line);border-left:3px solid var(--rose);color:#e0d2f5;line-height:1.85;font-size:14.5px;display:none;font-family:Georgia,serif;font-style:italic}
+.memory-detail.show{display:block;animation:appear .35s ease}
+.letter{max-width:700px;margin:0 auto;padding:clamp(28px,5vw,56px);border:1px solid #d2a8ff44;border-radius:30px;background:radial-gradient(ellipse at 50% 0%,#8b4dff55,transparent 65%),linear-gradient(180deg,#1f0e42,#120824);text-align:center;box-shadow:0 30px 90px #8b4dff2e}
+.seal{font-size:28px;color:var(--rose)}
+.letter p{color:#dccff0;font:16px/1.95 Georgia,serif}
+.reveal{margin-top:16px}
+.hidden-letter{display:none;text-align:left;animation:appear .5s ease;margin-top:26px;padding-top:10px;border-top:1px solid var(--line)}
+.hidden-letter.show{display:block}
+.song{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:#ffffff08}.song b{display:block;font:400 16px Georgia,serif}.song span{display:block;color:var(--muted);font-size:13px;margin-top:3px}.listen{background:#1db954;color:#04210f;font-size:12px;font-weight:700;letter-spacing:.04em;padding:10px 15px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:.2s}.listen:hover{transform:scale(1.05)}
+.planet:before{content:"";position:absolute;inset:-12px;border-radius:50%}body:before{animation:neb 50s ease-in-out infinite alternate paused}body.travel:before{animation-play-state:running}@keyframes neb{to{transform:translate(-3%,2%) scale(1.1)}}
+.primary:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:none;background:#ffffff14;color:#cdbbea}
+.ripple{position:absolute;width:20px;height:20px;border-radius:50%;border:1.5px solid #e3b5ff;opacity:.8;pointer-events:none;z-index:4;transform:translate(-50%,-50%);animation:rip .9s ease-out forwards}@keyframes rip{to{transform:translate(-50%,-50%) scale(9);opacity:0}}
+.end-note{text-align:center;color:#8f7bb0;font:italic 14px Georgia,serif;padding:40px 0 60px}
+#toast{position:fixed;bottom:calc(22px + env(safe-area-inset-bottom,0px));left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:12px 18px;border:1px solid #d2a8ff55;border-radius:999px;background:#2b1157;color:#f1e6ff;font-size:12px;transition:.3s;z-index:50;box-shadow:0 10px 30px #0008}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+#space{scroll-margin-top:calc(72px + env(safe-area-inset-top,0px))}
+@media(max-width:600px){.section{padding:60px 0}.space-wrap{min-height:390px;height:92vw}.memory-grid{grid-template-columns:1fr}.memory{min-height:auto}.planet-label{font-size:10.5px}.kicker:before,.kicker:after{width:12px;margin:0 6px}
+.story-panel{padding:20px}
+.story-panel.show{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));width:auto;margin:0;min-height:0;max-height:50svh;overflow-y:auto;overscroll-behavior:contain;z-index:30;background:linear-gradient(160deg,#2b1157f5,#150a2cfa);box-shadow:0 -10px 50px #000a}
+.story-panel h3{font-size:24px;margin:14px 0 8px}
+body.sheet-open main{padding-bottom:52svh}
+#toast{bottom:auto;top:calc(70px + env(safe-area-inset-top,0px));transform:translate(-50%,-20px)}#toast.show{transform:translate(-50%,0)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+.cube-wrap{margin:30px auto 0;text-align:center}
+#cubeCanvas{display:block;margin:0 auto;width:min(280px,100%);height:auto;aspect-ratio:260/240;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;filter:drop-shadow(0 0 18px #b36bff66)}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<header><div class="brand">✦ Bruninha</div><div class="counter" id="counter">0 / 7 planetas explorados</div></header>
+<main>
+<section class="hero">
+ <div class="eyebrow">feito só pra você, Bruninha</div>
+ <h1>Bruninha,<br><i>esse lugar é nosso.</i></h1>
+ <p>Eu podia só ter te mandado uma mensagem, Bruninha. Mas você merece um universo inteiro pra explorar, com calma, do seu jeito.</p>
+ <button class="primary" id="enter">Começar a explorar ↗</button>
+ <div class="scrollhint">deslize · ↓</div>
+</section>
+
+<section class="section" id="universo">
+ <div class="section-head">
+  <div class="kicker">01 · o nosso pequeno universo</div>
+  <h2>Escolha por onde começar</h2>
+  <p>Cada planeta guarda uma parte da nossa história. Toque em um deles, ou arraste o espaço pra girar as órbitas.</p>
+ </div>
+ <div class="space-wrap" id="space">
+  <div class="core">nosso<br>universo</div>
+  <div class="planet-path"><button class="planet" data-id="start" aria-label="O começo"><span class="planet-label">O começo</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="her" aria-label="Bruninha"><span class="planet-label">Bruninha</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="us" aria-label="Nós"><span class="planet-label">Nós</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="future" aria-label="Por agora"><span class="planet-label">Por agora</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="secret" aria-label="Um segredo"><span class="planet-label">Um segredo</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="music" aria-label="Playlist"><span class="planet-label">Playlist</span></button></div>
+  <div class="planet-path"><button class="planet" data-id="sorry" aria-label="Desculpa"><span class="planet-label">Desculpa</span></button></div>
+ </div>
+ <div class="hint">Toque em um planeta para abrir sua história.</div>
+ <div class="drag-indicator"><span>⤺</span> Segure para desacelerar, arraste para girar</div>
+ <article class="story-panel" id="story" aria-live="polite">
+  <div class="panel-top"><div class="panel-tag" id="storyTag"></div><button class="close" id="closeStory" aria-label="Fechar">×</button></div>
+  <h3 id="storyTitle"></h3><p id="storyText"></p><div class="panel-foot" id="storyFoot"></div><div id="storyExtra"></div>
+ </article>
+</section>
+
+<section class="section" id="fragmentos">
+ <div class="section-head">
+  <div class="kicker">02 · pequenos fragmentos</div>
+  <h2>Coisas que ficam</h2>
+  <p>Nem toda lembrança precisa ser grandiosa pra ser importante.</p>
+ </div>
+ <div class="memory-grid">
+  <button class="memory" data-memory="0"><span class="symbol">✧</span><strong>Um detalhe</strong><small>Uma coisa pequena em você.</small></button>
+  <button class="memory" data-memory="1"><span class="symbol">☾</span><strong>Uma lembrança</strong><small>Um momento que eu guardo.</small></button>
+  <button class="memory" data-memory="2"><span class="symbol">∞</span><strong>Uma sensação</strong><small>O que muda no meu dia.</small></button>
+ </div>
+ <div class="memory-detail" id="memoryDetail" aria-live="polite"></div>
+</section>
+
+<section class="section" id="carta">
+ <div class="letter">
+  <div class="seal">✧</div>
+  <div class="kicker">03 · uma última descoberta</div>
+  <h2>Bruninha, uma coisa que eu queria te dizer</h2>
+  <p>Guardei uma mensagem aqui. Ela abre depois que você explorar todos os planetas.</p>
+  <button class="primary reveal" id="reveal">Abrir minha mensagem</button>
+  <div class="hidden-letter" id="hiddenLetter">
+   <p>Esse universo é só um jeito de te mostrar que eu pensei em você em cada detalhe.</p>
+   <p>E desculpa a demora pra te entregar. Eu queria que ficasse perfeito, igual você.</p>
+   <p>Valeu por ter explorado até aqui.</p>
+   <p>Você é uma das pessoas mais especiais que eu já conheci.</p>
+   <p>Se você deu um sorriso ou ficou feliz por isso, já valeu o esforço.</p>
+   <p><i>Com muito carinho.</i></p>
+   <div class="cube-wrap" id="cubeWrap"><canvas id="cubeCanvas" width="260" height="240" role="img" aria-label="Cubo de cristal 3D, gire com o dedo"></canvas></div>
+  </div>
+ </div>
+</section>
+<div class="end-note">feito com carinho, pra Bruninha ✦</div>
+</main>
+<div id="toast" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const sf=$("#stars");
+for(let i=0;i<145;i++){const s=document.createElement("i");s.className="star";s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";const z=Math.random()*2+1;s.style.width=s.style.height=z+"px";s.style.setProperty("--t",(2+Math.random()*5)+"s");s.style.animationDelay=(-Math.random()*5)+"s";sf.appendChild(s)}
+const sorrySteps=["Teve vezes em que eu falei grosso com você. Você não merecia isso, e não existia motivo que justificasse.","Sinto muito pelas vezes que eu não atendi as suas expectativas. Você tinha o direito de esperar mais de mim em alguns momentos.","Sinto muito por ter sufocado você. Todo mundo precisa de espaço pra respirar, e eu não soube te dar isso.","Sinto muito por todo o estresse que eu te fiz passar. Você merecia mais leveza.","Somos jovens e ainda estamos aprendendo a lidar com sentimentos. Tudo isso é novo pra mim também. Estou tentando ser alguém mais leve de se ter por perto. Não é por cobrança, é por mim também."];
+const stories={
+ start:{tag:"primeira órbita",title:"Tudo começou num post",text:"Um post seu no Reddit, uma resposta minha e uma mensagem no privado. Parece pouco, mas pensa: se qualquer decisão minha antes daquele dia tivesse sido diferente, eu nem teria visto o seu post. Tudo que aconteceu antes precisou acontecer pra gente se encontrar ali. Até as entidades cogumelísticas ajudaram.",foot:"Se uma pecinha tivesse mudado, a gente nem se conhecia."},
+ her:{tag:"um mundo inteiro",title:"Bruninha",text:"Tem gente que pensa em linha reta. Você pensa em órbita: dá a volta, olha por um ângulo que ninguém tinha tentado e volta com uma ideia que eu nunca teria sozinho. Eu gosto de te ouvir pensar, porque até uma coisa simples vira outra quando passa pela sua cabeça. Seu jeito de rir e suas manias eu também guardo, mas é a sua forma de pensar que faz eu não querer sair da conversa.",foot:"Você é o planeta favorito deste universo, Bruninha."},
+ us:{tag:"duas órbitas",title:"O que existe entre nós",text:"Dois corpos podem nunca nem ter encostado um no outro e, ainda assim, continuar sentindo a força um do outro. A gente conhece bem essa distância, e aconteceu coisa pelo caminho que eu não vou fingir que não aconteceu. Mesmo assim, ainda existe conversa, e ainda existe curiosidade. Eu não sei o que isso vai ser. A gravidade não pergunta se a gente está pronto, ela só acontece. O que eu posso fazer é ir devagar.",foot:"Sem pressa de chegar."},
+ future:{tag:"sem disfarçar",title:"Por agora",text:"Não vou fingir que não tenho receio, porque eu tenho. Mas quando a gente conversa, ele fica bem pequeno. Por enquanto eu só quero a sua companhia.",foot:"O medo existe, mas a vontade de te ouvir é maior."},
+ secret:{tag:"uma descoberta escondida",title:"Se você chegou até aqui…",text:"..então já sabe, Bruninha, eu fiz tudo isso pensando em você. Só queria te ver alegre e sorrindo com esse celular na mão ksjdksk",foot:"Obrigado por explorar esse cantinho que é só nosso."}
+};
+stories.music={tag:"trilha sonora",title:"Playlist",text:"Tem música que diz o que a gente não sabe explicar direito. Essas três lembram você. Dá o play quando quiser.",foot:"Fone de ouvido recomendado 🎧",songs:[{t:"Quando bate aquela saudade",a:"Rubel",u:"https://open.spotify.com/search/rubel%20quando%20bate%20aquela%20saudade"},{t:"Bem",a:"Chapéu de Palha",u:"https://open.spotify.com/search/chap%C3%A9u%20de%20palha%20bem"},{t:"Amei Te Ver",a:"Tiago Iorc",u:"https://open.spotify.com/search/tiago%20iorc%20amei%20te%20ver"}]};
+stories.sorry={tag:"sem justificativa",title:"Desculpa",text:sorrySteps[0],foot:""};
+const memories=[
+ "Eu amo os seus cabelos vermelhos intensos, o seu rostinho e a sua personalidade cativante. Amo a sua vaidade: a forma como você se arruma, e sempre sai algo digno de uma premiação. Mas o que mais fica é o seu jeito de rir e de enxergar as coisas. ♥️",
+ "Barbecúé.",
+ "A sensação boa de fazer um carinho pequeno pra você, como colocar os adicionais no iFood do jeitinho que você pediu. Me alegra quando consigo deixar o seu dia um pouquinho mais leve."
+];
+const found=new Set();
+const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(window.tt);window.tt=setTimeout(()=>t.classList.remove("show"),2200)};
+function showStory(id){const d=stories[id];const before=found.size;found.add(id);document.body.classList.add("sheet-open");$("#counter").textContent=found.size+" / 7 planetas explorados";$("#storyTag").textContent=d.tag;$("#storyTitle").textContent=d.title;$("#storyText").textContent=d.text;$("#storyFoot").textContent=d.foot;const ex=$("#storyExtra");ex.textContent="";(d.songs||[]).forEach(s=>{const r=document.createElement("div");r.className="song";const i=document.createElement("div");const b=document.createElement("b");b.textContent=s.t;const sp=document.createElement("span");sp.textContent=s.a;i.append(b,sp);const a=document.createElement("a");a.className="listen";a.href=s.u;a.target="_blank";a.rel="noopener";a.textContent="Buscar no Spotify ↗";r.append(i,a);ex.appendChild(r)});const s=$("#story");s.classList.remove("show");void s.offsetWidth;s.classList.add("show");if(matchMedia("(max-width:600px)").matches)$("#space").scrollIntoView({behavior:"smooth",block:"start"});else s.scrollIntoView({behavior:"smooth",block:"nearest"});if(before<7&&found.size===7)setTimeout(()=>toast("Você descobriu tudo, Bruninha ✧ falta só a mensagem lá embaixo"),600)}
+$$(".planet").forEach(p=>p.addEventListener("click",e=>{e.stopPropagation();showStory(p.dataset.id)}));
+$("#closeStory").addEventListener("click",()=>{$("#story").classList.remove("show");document.body.classList.remove("sheet-open")});
+$$(".memory").forEach(b=>b.addEventListener("click",()=>{const d=$("#memoryDetail");d.classList.remove("show");void d.offsetWidth;d.textContent=memories[b.dataset.memory];d.classList.add("show");d.scrollIntoView({behavior:"smooth",block:"nearest"});b.style.borderColor="#b6a9ff88"}));
+$("#reveal").addEventListener("click",()=>{const h=$("#hiddenLetter");h.classList.toggle("show");const o=h.classList.contains("show");$("#reveal").textContent=o?"Fechar mensagem":"Abrir minha mensagem";if(o)toast("Uma mensagem só pra você ✧")});
+$("#enter").addEventListener("click",()=>$("#universo").scrollIntoView({behavior:"smooth"}));
+(()=>{
+const R=[.13,.19,.25,.31,.37,.42,.47],A=[.3,2.1,3.9,5.2,1,4.4,2.9],sp=$("#space"),ps=$$(".planet");
+const P=ps.map((p,i)=>({p,r:R[i],a:A[i],w:.55/Math.pow(R[i]/.13,1.5)}));
+const rings=R.map(()=>{const d=document.createElement("div");d.className="orbit";d.style.left=d.style.top="50%";d.style.transform="translate(-50%,-50%)";sp.insertBefore(d,sp.firstChild);return d});
+let pitch=.6,tp=.6,rot=0,vel=0,ts=1,tts=1,down=false,lx=0,t0=0;
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function render(){const S=Math.min(sp.clientWidth,sp.clientHeight),k=Math.cos(pitch),sn=Math.sin(pitch);
+P.forEach((o,i)=>{const g=o.a+rot,s=Math.sin(g),x=Math.cos(g)*o.r*S,y=s*o.r*S*k;
+rings[i].style.width=2*o.r*S+"px";rings[i].style.height=2*o.r*S*k+"px";
+o.p.style.transform=`translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) scale(${1+.22*s*sn})`;o.p.style.zIndex=s>0?3:1})}
+const story=$("#story");let hold=0,focus=null,moved=false,sx=0,sy=0,lt=0;
+const wrapA=a=>{a%=Math.PI*2;if(a>Math.PI)a-=Math.PI*2;if(a<-Math.PI)a+=Math.PI*2;return a};
+function frame(t){const dt=Math.min((t-t0)/1000||.016,.05);t0=t;
+const want=(down||t<hold)?.04:(story.classList.contains("show")?.35:1);
+ts+=(want-ts)*Math.min(1,dt*5);
+tp=.6+.07*Math.sin(t/2600);pitch+=(tp-pitch)*Math.min(1,dt*3);
+if(focus!==null){rot+=(focus-rot)*Math.min(1,dt*6);if(Math.abs(focus-rot)<.004)focus=null}
+else{rot+=vel*dt;vel*=Math.pow(.06,dt)}
+P.forEach(o=>o.a+=o.w*ts*dt);render();requestAnimationFrame(frame)}
+ps.forEach((p,i)=>p.addEventListener("click",()=>{if(reduce)return;const o=P[i];focus=rot+wrapA(Math.PI/2-(o.a+rot));hold=performance.now()+2600;vel=0}));
+function ripple(e){const b=sp.getBoundingClientRect(),r=document.createElement("div");r.className="ripple";r.style.left=e.clientX-b.left+"px";r.style.top=e.clientY-b.top+"px";r.addEventListener("animationend",()=>r.remove());sp.appendChild(r)}
+sp.addEventListener("pointerdown",e=>{down=true;moved=false;sx=lx=e.clientX;sy=e.clientY;lt=e.timeStamp;vel=0;focus=null;if(!e.target.closest(".planet"))ripple(e)});
+sp.addEventListener("pointermove",e=>{if(!down)return;if(!moved){if(Math.hypot(e.clientX-sx,e.clientY-sy)<8)return;moved=true;try{sp.setPointerCapture(e.pointerId)}catch(_){}}
+const dx=e.clientX-lx,dtm=Math.max(.008,(e.timeStamp-lt)/1000);lx=e.clientX;lt=e.timeStamp;const d=-dx*.0085;rot+=d;vel+=(Math.max(-5,Math.min(5,d/dtm))-vel)*.5});
+const up=()=>{down=false};
+["pointerup","pointercancel","lostpointercapture"].forEach(n=>sp.addEventListener(n,up));
+if(reduce)render();else requestAnimationFrame(frame);
+})();
+(()=>{
+const st=$$(".star").map(el=>{const z=(parseFloat(el.style.width)||1.5)/3;const o={el,z:.25+z*.75,x:parseFloat(el.style.left)/100,y:parseFloat(el.style.top)/100};el.style.left=el.style.top="0";return o});
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+let s=0,last=0,spd=0,tgt=0,run=false;
+function place(){const W=innerWidth,H=innerHeight;
+st.forEach(o=>{let x=(o.x*W-s*(5+16*o.z))%W;if(x<0)x+=W;let y=(o.y*H+s*(2+6*o.z))%H;if(y<0)y+=H;o.el.style.transform=`translate3d(${x}px,${y}px,0)`})}
+function f(t){const dt=Math.min((t-last)/1000,.05);last=t;spd+=(tgt-spd)*Math.min(1,dt*2.5);s+=dt*spd;place();
+if(tgt===0&&spd<.002){run=false;return}requestAnimationFrame(f)}
+function kick(){if(run)return;run=true;last=performance.now();requestAnimationFrame(f)}
+place();
+if(reduce){addEventListener("resize",place);return}
+addEventListener("resize",kick);
+new IntersectionObserver(en=>{const on=en[0].isIntersecting;tgt=on?1:0;document.body.classList.toggle("travel",on);if(on)kick()},{threshold:.15}).observe($("#space"))})();
+(()=>{
+$('[data-id="sorry"]').addEventListener("click",()=>{let i=0;const t=$("#storyText"),ex=$("#storyExtra"),f=$("#storyFoot"),n=document.createElement("button");
+n.className="primary";n.style.marginTop="18px";ex.textContent="";f.textContent="";
+const show=()=>{t.textContent=sorrySteps[i];if(i<sorrySteps.length-1){n.textContent="Próxima ("+(i+1)+"/"+sorrySteps.length+") ›"}else{n.remove();f.textContent="Sinto muito, de verdade.";const w=document.createElement("a"),msg="*Mensagem interceptada do planeta Desculpa*: eu aqui explorando um universo que você montou só pra mim, achei fofo demais. Tá desculpado por tudo, Lucas. Eu te amoooo ♥️";w.className="primary";w.style.cssText="display:inline-block;margin-top:18px;text-decoration:none";w.href="https://wa.me/5561992217378?text="+encodeURIComponent(msg);w.target="_blank";w.rel="noopener";w.textContent="Falar comigo no WhatsApp ↗";ex.appendChild(w)}};
+n.addEventListener("click",()=>{if(i<sorrySteps.length-1){i++;show()}});
+show();ex.appendChild(n)});
+})();
+(()=>{
+const S=[[40,105,"Atmosfera","O jeito de falar, o humor e o jeito de sentir tudo de verdade são só dela. Impossível confundir com outra pessoa."],[100,45,"Temperatura","Leve e calma na maior parte do tempo. Nos dias mais pesados, o planeta pede espaço, e eu aprendi a respeitar isso."],[160,100,"Habitante","População: uma. Linda, charmosa e cheia de personalidade, com pose de princesa e uma risada que muda o clima do lugar. Impossível não notar, minha tabacuda arretada."],[240,45,"Combustível","Um bom 90’s."]];
+$('[data-id="her"]').addEventListener("click",()=>{
+const ex=$("#storyExtra"),f=$("#storyFoot"),ns="http://www.w3.org/2000/svg",svg=document.createElementNS(ns,"svg"),cap=document.createElement("div");
+f.textContent="Toque nas estrelas para ler a ficha do planeta.";ex.textContent="";
+svg.setAttribute("viewBox","0 0 320 150");svg.style.cssText="width:100%;margin-top:14px;touch-action:manipulation";
+cap.style.cssText="min-height:44px;margin-top:6px;text-align:center;font:italic 14px Georgia,serif;color:#e3d4ff";cap.textContent="✦";
+const mk=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e};
+const lit=[],lines=[],dots=[];
+S.forEach((s,i)=>{if(i){const l=mk("line",{x1:S[i-1][0],y1:S[i-1][1],x2:s[0],y2:s[1],stroke:"#e3b5ff","stroke-width":1.2,opacity:.18,"stroke-dasharray":"3 4"});svg.appendChild(l);lines[i]=l}});
+S.forEach((s,i)=>{const g=mk("g",{role:"button",tabindex:0,"aria-label":s[2],style:"cursor:pointer"}),hit=mk("circle",{cx:s[0],cy:s[1],r:18,fill:"transparent"}),d=mk("circle",{cx:s[0],cy:s[1],r:5,fill:"#e3b5ff",opacity:.45});
+dots[i]=d;g.append(hit,d);svg.appendChild(g);
+const on=()=>{lit[i]=true;d.setAttribute("fill","#fff");d.setAttribute("r",7);d.setAttribute("opacity",1);d.setAttribute("stroke","#ff9fe0");d.setAttribute("stroke-width",2);
+cap.textContent=s[2]+": "+s[3];
+for(let k=1;k<S.length;k++)if(lit[k-1]&&lit[k]){lines[k].setAttribute("opacity",.9);lines[k].setAttribute("stroke-dasharray","0")}
+if(S.every((_,k)=>lit[k]))f.textContent="Constelação completa: Planeta Bruninha ✦"};
+g.addEventListener("click",on);g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();on()}})});
+ex.append(svg,cap)});
+})();
+(()=>{
+const btn=$("#reveal"),total=7;
+const upd=()=>{if(found.size<total){btn.disabled=true;btn.textContent="🔒 Explore os planetas ("+found.size+"/"+total+")"}else if(btn.disabled){btn.disabled=false;btn.textContent="Abrir minha mensagem"}};
+$$(".planet").forEach(p=>p.addEventListener("click",upd));upd();
+})();
+(()=>{
+const wrap=$("#cubeWrap"),cv=$("#cubeCanvas"),reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;let started=false;
+function start(){if(started)return;started=true;
+if(!window.THREE){wrap.style.display="none";return}
+const T=THREE,W=560,H=520;let r;
+try{r=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true})}catch(_){wrap.style.display="none";return}
+r.setPixelRatio(1);r.setSize(W,H,false);r.setClearColor(0x000000,0);
+const scene=new T.Scene(),cam=new T.PerspectiveCamera(32,W/H,.1,50);cam.position.set(0,0,6.4);
+const VS=`varying vec3 vN;varying vec3 vP;varying vec2 vUv;
+void main(){vUv=uv;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.0);vP=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`;
+const FS=`varying vec3 vN;varying vec3 vP;varying vec2 vUv;uniform float uTime;uniform float uMode;
+float lobe(vec3 R,vec3 d,float k){return pow(max(dot(R,normalize(d)),0.0),k);}
+vec3 env(vec3 R){vec3 c=vec3(0.0);
+c+=vec3(1.0,0.25,0.75)*lobe(R,vec3(-1.0,0.25,0.35),5.0)*1.1;
+c+=vec3(0.2,0.9,1.0)*lobe(R,vec3(1.0,0.15,0.35),5.0)*1.1;
+c+=vec3(1.0)*lobe(R,vec3(0.0,1.0,0.25),10.0)*1.3;
+c+=vec3(0.55,1.0,0.45)*lobe(R,vec3(0.1,-1.0,-0.2),4.0)*0.8;
+c+=vec3(0.6,0.45,1.0)*lobe(R,vec3(-0.2,0.3,-1.0),5.0)*0.9;
+c+=vec3(1.0,0.95,1.0)*lobe(R,vec3(0.35,0.25,1.0),24.0)*1.6;
+return c;}
+void main(){
+vec3 N=normalize(vN);vec3 V=normalize(cameraPosition-vP);
+if(!gl_FrontFacing)N=-N;
+float nv=abs(dot(N,V));float fr=pow(1.0-nv,2.2);
+vec3 R=reflect(-V,N);
+vec3 irid=0.5+0.5*cos(6.28318*(vec3(nv*1.3+uTime*0.04)+vec3(0.0,0.33,0.67)));
+float ed=min(min(vUv.x,1.0-vUv.x),min(vUv.y,1.0-vUv.y));
+vec3 col;
+if(uMode<0.5){
+float edge=1.0-smoothstep(0.0,0.045,ed);
+col=env(R)*(0.2+1.0*fr)+irid*(0.05+0.5*fr)+vec3(0.7,0.8,1.0)*edge*0.5+irid*edge*0.35;
+}else{
+vec3 tint=uMode<1.5?vec3(1.0,0.3,0.8):vec3(0.3,0.9,1.0);
+float k=0.5+0.5*cos(6.28318*(nv*0.9+vP.y*0.35+uMode*0.25+uTime*0.03));
+float fade=smoothstep(0.0,0.07,ed);
+col=(mix(tint,irid,0.45)*(0.15+0.5*k)+env(R)*tint*0.35)*fade;
+}
+col=min(col,vec3(1.1));
+gl_FragColor=vec4(col,clamp(max(col.r,max(col.g,col.b)),0.0,1.0));
+}`;
+const U={value:0};
+const mat=m=>new T.ShaderMaterial({uniforms:{uTime:U,uMode:{value:m}},vertexShader:VS,fragmentShader:FS,transparent:true,depthWrite:false,side:T.DoubleSide,blending:T.CustomBlending,blendEquation:T.AddEquation,blendSrc:T.OneFactor,blendDst:T.OneFactor,blendEquationAlpha:T.AddEquation,blendSrcAlpha:T.OneFactor,blendDstAlpha:T.OneFactor});
+const g=new T.Group();scene.add(g);const S=1.7,D=S*1.4142;
+g.add(new T.Mesh(new T.BoxGeometry(S,S,S),mat(0)));
+const p1=new T.Mesh(new T.PlaneGeometry(D,S),mat(1));p1.rotation.y=Math.PI/4;g.add(p1);
+const p2=new T.Mesh(new T.PlaneGeometry(D,S),mat(2));p2.rotation.y=-Math.PI/4;g.add(p2);
+const q=new T.Quaternion().setFromEuler(new T.Euler(.5,.75,0)),qa=new T.Quaternion(),ax=new T.Vector3();
+const spin=(dy,dx)=>{qa.setFromAxisAngle(ax.set(0,1,0),dy);q.premultiply(qa);qa.setFromAxisAngle(ax.set(1,0,0),dx);q.premultiply(qa);q.normalize()};
+let vy=0,vx=0,drag=false,lx=0,ly=0,lt=0,vis=true,t0=0;
+cv.addEventListener("pointerdown",e=>{drag=true;lx=e.clientX;ly=e.clientY;lt=e.timeStamp;vx=vy=0;cv.setPointerCapture(e.pointerId);cv.style.cursor="grabbing"});
+cv.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-lx,dy=e.clientY-ly,dtm=Math.max(.008,(e.timeStamp-lt)/1000);lx=e.clientX;ly=e.clientY;lt=e.timeStamp;
+const ay=dx*.011,ax2=dy*.011;spin(ay,ax2);const c=v=>Math.max(-8,Math.min(8,v));vy+=(c(ay/dtm)-vy)*.5;vx+=(c(ax2/dtm)-vx)*.5});
+const end=()=>{drag=false;cv.style.cursor="grab"};["pointerup","pointercancel","lostpointercapture"].forEach(n=>cv.addEventListener(n,end));
+new IntersectionObserver(en=>vis=en[0].isIntersecting).observe(cv);
+function f(ts){requestAnimationFrame(f);const dt=Math.min((ts-t0)/1000||.016,.05);t0=ts;if(!vis)return;
+if(!drag){spin(vy*dt,vx*dt);const dec=Math.pow(.04,dt);vy*=dec;vx*=dec;if(!reduce&&Math.hypot(vx,vy)<.2)spin(.35*dt,0)}
+U.value=ts/1000;g.quaternion.copy(q);r.render(scene,cam)}
+requestAnimationFrame(f)}
+$("#reveal").addEventListener("click",()=>{if($("#hiddenLetter").classList.contains("show"))start()});
+})();
+</script>
+</body>
+</html>
